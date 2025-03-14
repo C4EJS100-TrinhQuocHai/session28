@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        2 nhóm kiểu dữ liệu
+        I. nguyên thủy, đơn giản, primitive-type, tham trị
+            number, string, null, NaN, boolean, undefined...
+        II. phức tạp, tham chiếu, reference-type
+        + array
+        + function
+        + object_ đối tượng
+
+        OBJECT
+        1. cách khai báo
+            const obj= new Object()
+            class
+            hàm tạo constructor
+            const obj={} ***** HAY DÙNG
+        2. thành phần của object
+            + thuộc tính
+            + phương thức 
+        3. cách tương tác với các thành phần đấy
+
+
+    -->
+        <script>
+            // property: thuộc tính
+            let student={
+                name:"minh thu", // key_ value
+                age:20,
+                // key:123
+            }
+            /* 
+                CRUD
+                1. C_ CREATE : thêm thuộc tính cho đối tượng
+                TÊN ĐỐI TƯỢNG .THUỘC TÍNH= GIÁ TRỊ
+                2. R_READ : hiển thị thuộc tính và giá trị
+                for_in
+                3. U_UPDATE: cập nhật
+                4. D_DELETE: xóa thuộc tính
+                delete ĐỐI TƯỢNG. THUỘC TÍNH
+                các cách clone object trong JS
+            
+            */
+           student.address="Hà Nội";
+        //    console.log("student",student);
+        for (const key in student) {
+            // key : name,age, address
+            console.log("key",student[key]);
+            
+        }
+        student.age= 21;
+        delete student.age;
+        // console.log("student",student);
+
+        let a=5;
+        let b=a;
+        a=10;
+        console.log("b",b);
+        
+        let obj1={
+            address:"hà nội"
+        }
+        // let obj2= obj1;
+        // obj1.address="hcm";
+        // console.log("obj2",obj2);
+
+        let obj2= {...obj1};
+        obj1.address="hcm";
+        console.log("obj2",obj2);
+        
+        
+        </script>
+</body>
+</html>

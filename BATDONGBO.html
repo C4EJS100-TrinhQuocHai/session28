@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        callback để làm gì?
+        thường dùng để xử lý tác vụ bất đồng bộ
+    -->
+        <script>
+            // console.log("1");
+            // setTimeout(() => {
+            //     console.log("2");
+                
+            // }, 3000);
+            // console.log("3");   
+            let sdt;
+            function xinSoDt(callback) {
+                console.log("Quang gọi cho An xin số Bách");
+                setTimeout(() => {
+                    console.log("đợi mình tìm");
+                    sdt="0923333333";
+                    callback(sdt);
+                }, 3000);
+            }
+            // dùng callback để xử lý
+            function goiDienSauTimThaySo(sdt) {
+                console.log(` Quang gọi cho Bách theo số ${sdt}`);
+            }
+            xinSoDt(goiDienSauTimThaySo);
+          
+        </script>
+</body>
+</html>
