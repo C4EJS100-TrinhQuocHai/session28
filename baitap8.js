@@ -80,7 +80,7 @@ while (true) {
     function updateSalary(){
         let id=prompt("nhập id nhân viên muốn cập nhật lương");
         // kiểm tra xem có nhân viên trùng id không?
-        let findIndex= em.findIndex(item=>item.id==id);
+        let findIndex= employees.findIndex(item=>item.id==id);
         if(findIndex!=-1){  
             let newSalary= +prompt("mời nhập mức lương muốn cập nhật");
             employees[findIndex].salary= newSalary;
